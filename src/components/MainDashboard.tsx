@@ -11,7 +11,7 @@ export function MainDashboard() {
   const [mapView, setMapView] = useState('live');
   const [showRoutePopup, setShowRoutePopup] = useState<string | null>(null);
   const [showAllAlerts, setShowAllAlerts] = useState(false);
-  const [showFileUpload, setShowFileUpload] = useState(false);
+  const [showFileUpload, setShowFileUpload] = useState(true);
   const { currentNetwork, setUploadedNetwork } = useNetwork();
 
   const isUploadedNetwork = currentNetwork === 'uploaded';

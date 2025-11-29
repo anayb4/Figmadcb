@@ -7,12 +7,13 @@ import { CorridorAnalysis } from "./components/CorridorAnalysis";
 import { BikeLaneDesigner } from "./components/BikeLaneDesigner";
 import { ScenarioComparison } from "./components/ScenarioComparison";
 import { ReportGeneration } from "./components/ReportGeneration";
+import { DialogShowcase } from "./components/DialogShowcase";
 import { Toaster } from "./components/ui/sonner";
 import { NetworkProvider } from "./context/NetworkContext";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [activeScreen, setActiveScreen] = useState("reports");
+  const [activeScreen, setActiveScreen] = useState("showcase");
   const [previousScreen, setPreviousScreen] =
     useState("dashboard");
 
@@ -23,6 +24,16 @@ export default function App() {
 
   if (!isLoggedIn) {
     return <LoginScreen onLogin={() => setIsLoggedIn(true)} />;
+  }
+
+  // Show dialog showcase without sidebar
+  if (activeScreen === "showcase") {
+    return (
+      <NetworkProvider>
+        <DialogShowcase />
+        <Toaster />
+      </NetworkProvider>
+    );
   }
 
   return (

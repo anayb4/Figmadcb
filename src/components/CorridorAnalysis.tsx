@@ -13,9 +13,9 @@ interface CorridorAnalysisProps {
 
 export function CorridorAnalysis({ onShowScenario }: CorridorAnalysisProps) {
   const [selectedRoute, setSelectedRoute] = useState('route-44');
-  const [showAnalysis, setShowAnalysis] = useState(false);
-  const [selectedIntersection, setSelectedIntersection] = useState<string | null>(null);
-  const [highlightedLocation, setHighlightedLocation] = useState<number | null>(null);
+  const [showAnalysis, setShowAnalysis] = useState(true);
+  const [selectedIntersection, setSelectedIntersection] = useState<string | null>('Main & 5th');
+  const [highlightedLocation, setHighlightedLocation] = useState<number | null>(0);
   const [dateRange, setDateRange] = useState<Date | undefined>(new Date());
   const { currentNetwork } = useNetwork();
 

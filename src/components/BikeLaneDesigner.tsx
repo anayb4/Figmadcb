@@ -14,7 +14,7 @@ export function BikeLaneDesigner({ onGenerateReport }: BikeLaneDesignerProps) {
   const [showHeatmap, setShowHeatmap] = useState(false);
   const [laneType, setLaneType] = useState('cycle-track');
   const [drawMode, setDrawMode] = useState(false);
-  const [mapTool, setMapTool] = useState('satellite');
+  const [mapTool, setMapTool] = useState('draw');
   const { currentNetwork } = useNetwork();
 
   const isUploadedNetwork = currentNetwork === 'uploaded';
