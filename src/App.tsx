@@ -12,7 +12,7 @@ import { NetworkProvider } from "./context/NetworkContext";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [activeScreen, setActiveScreen] = useState("dashboard");
+  const [activeScreen, setActiveScreen] = useState("corridor");
   const [previousScreen, setPreviousScreen] =
     useState("dashboard");
 
