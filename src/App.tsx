@@ -11,7 +11,7 @@ import { Toaster } from "./components/ui/sonner";
 import { NetworkProvider } from "./context/NetworkContext";
 
 export default function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [activeScreen, setActiveScreen] = useState("dashboard");
   const [previousScreen, setPreviousScreen] =
     useState("dashboard");
